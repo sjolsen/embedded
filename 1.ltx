@@ -91,7 +91,14 @@ This model is introduced to allow readers to ``visualize the various components 
 \end{itemize}
 
 \subsubsection*{What is the difference between a cross-compiler and a compiler?}
+
+A compiler is a program which translates programs from one language to another; a cross-compiler is a compiler whose target language is incompatible with the machine on which the compiler is running.
+
 \subsubsection*{What is the difference between a compiler and an assembler?}
+
+A compiler translates programs between any two languages; most commonly, the target language is a machine-specific language such as x86 assembly or ELF-AVR, while the source language is usually a high-level language such as C++ or {\scshape Lisp}.
+
+An assembler is a special type of compiler whose input language is assembly language, and whose output is a machine code format such as ELF or COFF.
 
 \section*{Compiling for AVR and x86}
 \subsubsection*{Show the commands of the two compilations.}
