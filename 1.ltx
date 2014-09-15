@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{listings}
+\usepackage{graphicx}
+\lstset{basicstyle=\ttfamily}
+
+\title{CS 3468 -- Homework 1}
+\author{Stuart Olsen}
+
+\begin{document}
+\maketitle
+
+\section*{Chapter 1}
+\subsubsection*{Name and describe the four development models which most embedded projects are based upon.}
+
+\begin{itemize}
+\item The {\itshape big-bang} model is characterized by a lack of formal process and planning.
+\item The {\itshape code-and-fix} model is characterized by a lack of formal process, but has defined requirements.
+\item The {\itshape waterfall} model is characterized by a series of rigid development steps.
+\item The {\itshape spiral} model is characterized by feedback between several development steps.
+\end{itemize}
+
+\subsubsection*{What is the architecture of an embedded system?}
+
+The architecture of an embedded system is ``an {\itshape abstraction} of the embedded device.''
+
+\subsubsection*{What is the Embedded Systems Model?}
+
+The Embedded Systems Model is ``the primary architectural tool used [by the author of the text] to introduce the major elements located within an embedded system design.''
+
+\subsubsection*{What structural approach does the Embedded Systems Model take?}
+
+The Embedded Systems Model takes a layered, modular approach to representing the structure of embedded systems architecture.
+
+\subsubsection*{Draw and define the layers of this model.}
+
+{\itshape See Figure \ref{fig:esm}.} The Embedded Systems Model is comprised of three layers: the application software layer; the system software layer; and the hardware layer.
+
+The application software layer contains the high-level software being processed by the embedded system. The system software layer contains the low-level software on the embedded system---providing services to the application layer---and sits atop the hardware layer, which consists of the system's physical components.
+
+The application and system software layers may or may not be present in a given embedded system, according to the author's conventions. The hardware layer is required.
+
+\begin{figure}
+ \centering
+ \includegraphics{ESM.pdf}
+ \caption{Embedded Systems Model}
+ \label{fig:esm}
+\end{figure}
+
+\subsubsection*{Why is this model introduced?}
+
+This model is introduced to
+
+\section*{Chapter 2}
+\subsubsection*{Name and define four groups of market-specific standards.}
+\subsubsection*{Give three examples of standards that fall under each of the four market-specific groups.}
+\subsubsection*{What is the difference between a cross-compiler and a compiler?}
+\subsubsection*{What is the difference between a compiler and an assembler?}
+
+\section*{Compiling for AVR and x86}
+\subsubsection*{Show the commands of the two compilations.}
+
+\begin{itemize}
+\item \lstinline[language=sh]{gcc hello.c -o hello.x86}
+\item \lstinline[language=sh]{avr-gcc hello.c -o hello.avr}
+\end{itemize}
+
+\subsubsection*{Use the command {\ttfamily objdump -D -S hello.x86 > hello.x86.asm} to get the assembly of the x86 program. Locate, copy, and paste the x86 assembly code of the {\ttfamily main} function only.}
+
+\lstinputlisting[language={[x86masm]Assembler},firstline=290,lastline=308]{hello.x86.asm}
+
+\subsubsection*{Use the command {\ttfamily avr-objdump -D -S hello.avr > hello.avr.asm} to get the assembly of the AVR program. Locate, copy, and paste the AVR assembly code of the {\ttfamily main} function only.}
+
+\lstinputlisting[language={[x86masm]Assembler},firstline=35,lastline=45]{hello.avr.asm}
+
+\subsubsection*{Discuss the purpose of the {\ttfamily puts} function, and the reason why you can locate the AVR code of the {\ttfamily puts} function but not the x86 code.}
+
+The {\ttfamily puts} function outputs a null-terminated string to standard output, followed by a newline. Its implementation is present in the AVR executable because the standard library is statically linked on the AVR platform; it is not present in the x86 executable because it is compiled for a hosted environment where the standard library is dynamically linked.
+
+The standard library is statically linked on the AVR platform because the produced executable is meant to run in a freestanding environment; there is no operating system (specifically, no linker) available to dynamically link the standard library.
+
+\end{document}
