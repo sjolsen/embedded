@@ -1,0 +1,59 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\newunit{\degreeFahrenheit}{\degree F}
+\usepackage{amsmath}
+
+\newcommand{\SIfrac}[3]{
+  {\ensuremath{\frac{\num{#1}}{\num{#2}}\,\si{#3}}}
+}
+
+\title{CS 3468 -- Homework 2}
+\author{Stuart Olsen}
+
+\begin{document}
+\maketitle
+
+\section*{Chapter 3}
+\subsection*{2a. (Please use the schematic symbols on page 594)}
+
+\subsection*{12.}
+
+\subsection*{19.}
+
+\subsection*{20. (Describe what these ICs are)}
+
+\section*{Additional Questions}
+\renewcommand{\thesubsubsection}{\alph{subsubsection}}
+
+\subsection*{The resistance of a thermistor changes according to the temperature. In the right circuit, the resistance function of the thermistor is $R_0 = \SI{10000}{\ohm} + \SI{60}{\ohm\per\degreeFahrenheit} \cdot T$. The other resistor is $R_1 = \SI{10000}{\ohm}$. The output voltage on $R_1$ is $V_0 = \SI{3}{\volt} \cdot \frac{R_1}{R_0 + R_1}$.}
+\subsubsection{If the room temperature is $T = \SI{70}{\degreeFahrenheit}$, what is $V_0$?}
+\begin{align*}
+  V_0 &= \SI{3}{\volt} \cdot \frac{R_1}{R_0 + R_1} \\
+  &= \SI{3}{\volt} \cdot \frac{\SI{10000}{\ohm}}{R_0 + \SI{10000}{\ohm}} \\
+  &= \SI{3}{\volt} \cdot \frac{\SI{10000}{\ohm}}{(\SI{10000}{\ohm} + \SI{60}{\ohm\per\degreeFahrenheit} \cdot T) + \SI{10000}{\ohm}} \\
+  &= \SI{3}{\volt} \cdot \frac{\SI{10000}{\ohm}}{(\SI{10000}{\ohm} + \SI{60}{\ohm\per\degreeFahrenheit} \cdot \SI{70}{\degreeFahrenheit}) + \SI{10000}{\ohm}} \\
+  &= \SI{3}{\volt} \cdot \frac{\SI{10000}{\ohm}}{(\SI{10000}{\ohm} + \SI{4200}{\ohm}) + \SI{10000}{\ohm}} \\
+  &= \SI{3}{\volt} \cdot \frac{\SI{10000}{\ohm}}{\SI{14200}{\ohm} + \SI{10000}{\ohm}} \\
+  &= \SI{3}{\volt} \cdot \frac{\SI{10000}{\ohm}}{\SI{24200}{\ohm}} \\
+  &= \SIfrac{30000}{24200}{\volt} \\
+  &\approx \fbox{\SI{1.24}{\volt}}
+\end{align*}
+
+\subsubsection{If $V_0 = \SI{1.339}{\volt}$, what is the room temperature?}
+\begin{align*}
+  V_0 &= \SI{3}{\volt} \cdot \frac{R_1}{R_0 + R_1} \\
+  \SI{1.339}{\volt} &= \SI{3}{\volt} \cdot \frac{\SI{10000}{\ohm}}{(\SI{10000}{\ohm} + \SI{60}{\ohm\per\degreeFahrenheit} \cdot T) + \SI{10000}{\ohm}} \\
+  \frac{\num{1.339}}{\num{30000}} &= \frac{\SI{1}{\ohm}}{(\SI{10000}{\ohm} + \SI{60}{\ohm\per\degreeFahrenheit} \cdot T) + \SI{10000}{\ohm}} \\
+  \frac{\num{30000}}{\num{1.339}} &= \frac{(\SI{10000}{\ohm} + \SI{60}{\ohm\per\degreeFahrenheit} \cdot T) + \SI{10000}{\ohm}}{\SI{1}{\ohm}} \\
+  &= \frac{\SI{20000}{\ohm} + \SI{60}{\ohm\per\degreeFahrenheit} \cdot T}{\SI{1}{\ohm}} \\
+  &= \num{20000} + \SI{60}{\per\degreeFahrenheit} \cdot T \\
+  \frac{\num{30000}}{\num{1.339}} - \num{20000} &= \SI{60}{\per\degreeFahrenheit} \cdot T \\
+  T &=\frac{\frac{\num{30000}}{\num{1.339}} - \num{20000}}{60}\,\degreeFahrenheit \\
+  &\approx \fbox{\SI{40.1}{\degreeFahrenheit}}
+\end{align*}
+
+\end{document}
