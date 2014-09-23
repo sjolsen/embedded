@@ -6,6 +6,7 @@
 \usepackage{siunitx}
 \newunit{\degreeFahrenheit}{\degree F}
 \usepackage{amsmath}
+\usepackage{hyperref}
 
 \newcommand{\SIfrac}[3]{
   {\ensuremath{\frac{\num{#1}}{\num{#2}}\,\si{#3}}}
@@ -88,5 +89,12 @@ Assuming there is exactly one entry for each temperature value in the range $[-5
 \subsection*{Use an INA2128 chip to produce the signal $y = 5 + 26 \cdot x$, where $x$ is the input and $y$ is the output.}
 \setcounter{subsubsection}{0}
 \subsubsection{Make a schematic of the circuit, and show the value of the components used in the schematic.}
+
+\subsubsection{Explain your schematic. For example, if you find a figure or a formula in the manual that helps you make the schematic, you should cite the figure or the formula in the explanation of your schematic and explain what help you get from it.}
+
+\subsection*{Follow the guide of Javadoc style at \url{http://en.wikipedia.org/wiki/Javadoc} to document the command {\ttfamily receive} in the interface {\ttfamily Receive}.}
+\setcounter{subsubsection}{0}
+
+\lstinputlisting{receive.nc}
 
 \end{document}
