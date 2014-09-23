@@ -30,6 +30,7 @@
 \renewcommand{\thesubsubsection}{\alph{subsubsection}}
 
 \subsection*{The resistance of a thermistor changes according to the temperature. In the right circuit, the resistance function of the thermistor is $R_0 = \SI{10000}{\ohm} + \SI{60}{\ohm\per\degreeFahrenheit} \cdot T$. The other resistor is $R_1 = \SI{10000}{\ohm}$. The output voltage on $R_1$ is $V_0 = \SI{3}{\volt} \cdot \frac{R_1}{R_0 + R_1}$.}
+\setcounter{subsubsection}{0}
 \subsubsection{If the room temperature is $T = \SI{70}{\degreeFahrenheit}$, what is $V_0$?}
 \begin{align*}
   V_0 &= \SI{3}{\volt} \cdot \frac{R_1}{R_0 + R_1} \\
@@ -55,5 +56,37 @@
   T &=\frac{\frac{\num{30000}}{\num{1.339}} - \num{20000}}{60}\,\degreeFahrenheit \\
   &\approx \fbox{\SI{40.1}{\degreeFahrenheit}}
 \end{align*}
+
+\subsection*{Assume the resistance function of the thermistor $R_0$ is a nonlinear function, and is stored as a table (shown below) in the memory of an embedded system. Each row of the table is the resistance at a specific temperature ($\si{\degreeFahrenheit}$).}
+\setcounter{subsubsection}{0}
+\subsubsection{How many bytes are needed in minimum for each row to record both the temperature and the resistance?}
+It takes $\lceil{\log_{2}{N}}\rceil$ bits to differentiate between $N$ distinct values. To represent an arbitrary element of the range $[m,n]$, then, requires $\lceil{\log_{2}(n-m+1)}\rceil$ bits.
+
+If we choose to represent the temperature as an arbitrary element of the range $[-50,200]$, we will need
+
+\begin{align*}
+  \lceil{\log_{2}(n-m+1)}\rceil &= \lceil{\log_{2}(200-(-50)+1)}\rceil \\
+  &= \lceil{\log_{2}(251)}\rceil \\
+  &= 8 \\
+\end{align*}
+
+bits, or one byte for each temperature entry. Similarly, if we choose to represent the resistance as an arbitrary element of the range $[8000,20000]$, we will need
+
+\begin{align*}
+  \lceil{\log_{2}(n-m+1)}\rceil &= \lceil{\log_{2}(20000-8000+1)}\rceil \\
+  &= \lceil{\log_{2}(12001)}\rceil \\
+  &= 14 \\
+\end{align*}
+
+bits for each resistance entry. This requires two bytes' storage.
+
+Thus, if we choose a simple biased-integer representation, we need \fbox{three bytes'} total storage per row.
+
+\subsubsection{How many bytes of memory are needed to store the complete table?}
+Assuming there is exactly one entry for each temperature value in the range $[-50,200]$ (\si{\degreeFahrenheit}), there are $200-(-50)+1 = 251$ rows. Assuming further that no padding is added to the representation of a row (e.g., to make row entries word-aligned), the table will then occupy $3 \cdot 251 = $ \fbox{$753$ bytes} of memory.
+
+\subsection*{Use an INA2128 chip to produce the signal $y = 5 + 26 \cdot x$, where $x$ is the input and $y$ is the output.}
+\setcounter{subsubsection}{0}
+\subsubsection{Make a schematic of the circuit, and show the value of the components used in the schematic.}
 
 \end{document}
