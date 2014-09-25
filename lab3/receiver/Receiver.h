@@ -2,8 +2,8 @@
 #define RECEIVER_H
 
 enum {
-  RADIOID = 5,
-  ReceiverID = 6,
+  RADIOID = 17,
+  ReceiverID = 18,
 };
 
 typedef nx_struct _RadioMsg {
