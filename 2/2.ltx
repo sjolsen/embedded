@@ -102,7 +102,7 @@ bits, or one byte for each temperature entry. Similarly, if we choose to represe
 
 bits for each resistance entry. This requires two bytes' storage.
 
-Thus, if we choose a simple biased-integer representation, we need \fbox{three bytes'} total storage per row.
+Thus, if we choose a simple biased-integer representation, we need \fbox{three bytes'} total storage per row (assuming byte-alignment for all data).
 
 \subsubsection{How many bytes of memory are needed to store the complete table?}
 Assuming there is exactly one entry for each temperature value in the range $[-50,200]$ (\si{\degreeFahrenheit}), there are $200-(-50)+1 = 251$ rows. Assuming further that no padding is added to the representation of a row (e.g., to make row entries word-aligned), the table will then occupy $3 \cdot 251 = $ \fbox{$753$ bytes} of memory.
