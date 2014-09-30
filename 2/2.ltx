@@ -4,7 +4,7 @@
 \lstset{basicstyle=\ttfamily}
 \usepackage{graphicx}
 \usepackage{siunitx}
-\newunit{\degreeFahrenheit}{\degree F}
+\DeclareSIUnit{\degreeFahrenheit}{\degree F}
 \usepackage{amsmath}
 \usepackage{hyperref}
 
@@ -22,6 +22,7 @@
 \subsection*{Given the simple flashlight shown in Figure 3-38, draw a corresponding schematic diagram. Please use the schematic symbols on page 594.}
 
 \subsection*{What is an LED?}
+An LED, or a light-emitting diode, is a semiconductor device which emits light when a current is applied across its leads. Electrically, it functions as a diode.
 
 \subsection*{How does an LED work?}
 
@@ -58,7 +59,7 @@
   &= \frac{\SI{20000}{\ohm} + \SI{60}{\ohm\per\degreeFahrenheit} \cdot T}{\SI{1}{\ohm}} \\
   &= \num{20000} + \SI{60}{\per\degreeFahrenheit} \cdot T \\
   \frac{\num{30000}}{\num{1.339}} - \num{20000} &= \SI{60}{\per\degreeFahrenheit} \cdot T \\
-  T &=\frac{\frac{\num{30000}}{\num{1.339}} - \num{20000}}{60}\,\degreeFahrenheit \\
+  T &=\frac{\frac{\num{30000}}{\num{1.339}} - \num{20000}}{60}\,\si{\degreeFahrenheit} \\
   &\approx \fbox{\SI{40.1}{\degreeFahrenheit}}
 \end{align*}
 
