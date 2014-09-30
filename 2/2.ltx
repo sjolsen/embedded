@@ -25,12 +25,28 @@
 An LED, or a light-emitting diode, is a semiconductor device which emits light when a current is applied across its leads. Electrically, it functions as a diode.
 
 \subsection*{How does an LED work?}
+When current is applied across the {\em p-n} junction of an LED, electrons in the {\em n} region flow across the junction into the {\em p} region. As they flow across the junction, they drop to a lower energy level, emitting energy in the form of a photon. The net result is the emission of electromagnetic radiation typically in or near the visible light spectrum.
 
 \subsection*{What is an IC?}
+An IC, or integrated circuit, is an electronic circuit integrated into a single semiconductor substrate.
 
 \subsection*{Name and describe the classes of ICs according to the number of electronic components they contain.}
+\begin{itemize}
+\item {\em Small scale integration} ICs contain up to \num{100} components per chip.
+\item {\em Medium scale integration} ICs contain up to \numrange{100}{3000} components per chip.
+\item {\em Large scale integration} ICs contain up to \numrange{3000}{100000} components per chip.
+\item {\em Very large scale integration} ICs contain up to \numrange{100000}{1000000} components per chip.
+\item {\em Ultra large scale integration} ICs contain over \num{1000000} components per chip.
+\end{itemize}
 
 \subsection*{Identify at least five ICs in Figures 3-37a and b under problem 1 of this section. Describe what these ICs are.}
+\begin{itemize}
+\item {\bf Freescale MPC7410 Altivec} -- A 32-bit microprocessor implementing the PowerPC RISC ISA and the Altivec instruction set; this is a main system processor.
+\item {\bf Freescale MPC107} -- A PCI bridge and integrated memory controller for MPC7410 and similar microprocessors; this connects the main system processor to system memory and PCI peripherals.
+\item {\bf Samsung S3C4510B} -- A 32-bit microprocessor based on the ARM7TDMI-S; this is a main system processor.
+\item {\bf Texas Instruments SN74ALVCH16245} -- A 16-bit bus transceiver; this allows asynchronous communication between two buses. In this design, two transceivers connect the system data bus to flash storage, the EEPROM, two CAN buses, and displays.
+\item {\bf Altera EPM7064AE-4} -- An EEPROM-based programmable logic device (FPGA); this is used in this system to control the flash storage, the EEPROM, two CAN buses, and displays.
+\end{itemize}
 
 \section*{Additional Questions}
 \renewcommand{\thesubsubsection}{\alph{subsubsection}}
