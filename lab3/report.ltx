@@ -1,0 +1,40 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily}
+
+\title{Lab Report -- Radio Communication}
+\author{
+  Stuart Olsen\\
+  so1132
+}
+
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+The task of this lab was to set up two motes to communicate via radio. The ``sender'' mote sent out a repeating sequence of packets encoding numbers to be displayed on the ``receiver'' mote's LEDs. The receiver mote was to be configured to send acknowledgment of received packets. The sender mote was to be configured to require receipt of this acknowledgment before sending the next packet in the sequence.
+
+I learned how to use the TinyOS documentation and how to configure the AM radio send/receive components to use packet acknowledgment.
+
+\section*{Implementation}
+The sender was configured at boot (event \lstinline{Boot.booted}) to require acknowledgment for the sent packets using \lstinline{PacketAcknowledgements.requestAck}.
+
+The code for sending packets was then modified only to continue to the next packet in the sequence upon receipt of acknowledgment. This was done by making the data increment conditional on the result of \lstinline{PacketAcknowledgements.wasAcked}.
+
+The components used by the sender and the way in which they were wired is as follows:
+
+\lstinputlisting[firstline=7,lastline=22]{sender/SenderAppC.nc}
+
+The interfaces used were:
+
+\lstinputlisting[firstline=4,lastline=12]{sender/SenderC.nc}
+
+The receiver code did not require any modification to implement acknowledgment.
+
+\section*{Experiment}
+To test communication failure, the receiver mote was moved to the opposite side of the room from the sender mote. Occasionally, instead of incrementing the number displayed on the LEDs in step, the receiver would continue displaying the same number for multiple steps, then change to the number which would be shown if it had operated correctly; that is, the receiver would occasionally skip numbers.
+
+After configuring packet acknowledgment, the receiver exhibited nearly the same behaviour, with one exception: when it resumed the sequence, it picked up on the next number in the sequence after the one on which it had stopped. This is because without receiving the next packet, the receiver would not update the LEDs and would not send an acknowledgment to the sender. Without the acknowledgment, the sender would continue to broadcast the same packet until the receiver acknowledged receiving it, and so the receiver could not skip displaying any number in the sequence.
+
+\end{document}

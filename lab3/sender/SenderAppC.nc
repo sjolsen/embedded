@@ -11,7 +11,6 @@ implementation {
   components new AMSenderC(RADIOID);
   components SenderC as AppC;
 
-
   AppC.Boot -> MainC.Boot;
   AppC.Leds -> LedsC.Leds;
   AppC.Timer -> TimerC.Timer;

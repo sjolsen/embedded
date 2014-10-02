@@ -15,6 +15,8 @@
 \title{CS 3468 -- Homework 2}
 \author{Stuart Olsen}
 
+\allowdisplaybreaks
+
 \begin{document}
 \maketitle
 
@@ -114,11 +116,30 @@ Thus, if we choose a simple biased-integer representation, we need \fbox{three b
 \subsubsection{How many bytes of memory are needed to store the complete table?}
 Assuming there is exactly one entry for each temperature value in the range $[-50,200]$ (\si{\degreeFahrenheit}), there are $200-(-50)+1 = 251$ rows. Assuming further that no padding is added to the representation of a row (e.g., to make row entries word-aligned), the table will then occupy $3 \cdot 251 = $ \fbox{$753$ bytes} of memory.
 
-\subsection*{Use an INA2128 chip to produce the signal $y = 5 + 26 \cdot x$, where $x$ is the input and $y$ is the output.}
+\subsection*{Use an INA2128 chip to produce the signal $y = \SI{5}{\volt} + 26 \cdot x$, where $x$ is the input and $y$ is the output.}
 \setcounter{subsubsection}{0}
 \subsubsection{Make a schematic of the circuit, and show the value of the components used in the schematic.}
 
+{\itshape See attached schematic.}
+
 \subsubsection{Explain your schematic. For example, if you find a figure or a formula in the manual that helps you make the schematic, you should cite the figure or the formula in the explanation of your schematic and explain what help you get from it.}
+The INA2128 contains two voltage amplifiers. The first is used to scale the input voltage, and the second is used to increase it by \SI{5}{\volt}.
+
+The IC takes its operational voltage across pins 9 and 8. These are attached to $\mathbf{V_{cc}}$ (\SIrange{2.25}{18}{\volt}) and ground (\SI{0}{\volt}), respectively. Amplifier A is first used to scale the input voltage, so $\mathbf{V_{x}}$ is attached across pins 1 and 2. To scale $x$ by a gain of $G = 26$, the equation
+
+\begin{align*}
+  G = 1 + \frac{\SI{50}{\kilo\ohm}}{R_G}
+\end{align*}
+
+is used to obtain an $R_G$ of \SI{2}{\kilo\ohm}, to be applied across pins 3 and 4. Grounding pin 5 (the reference output voltage for amplifier A) then gives pin 6 (the output for amplifier A) a potential $V_0$ of $26 \cdot x$ above ground, from the equation
+
+\begin{align*}
+  V_0 = G \cdot (\mathbf{V_{IN}}^+ - \mathbf{V_{IN}}^-).
+\end{align*}
+
+Pins 6 and 7 are attached in accordance with the IC's requirements.
+
+Amplifier B is used as a voltage adder. This is done by wiring the high output of amplifier A (pin 6) to the high input of amplifier B (pin 15) and the low input of amplifier B (pin 16) to \SI{-5}{\volt}. The voltage difference is scaled by $1$ (unchanged) by leaving pins 13 and 14 disconnected. Pins 10 and 11 are connected in accordance with the IC's requirements. There is then a potential of $\SI{5}{\volt} + 26 \cdot x$ across pins 11 and 12. These are designated the output pins for $\mathbf{V_y}$.
 
 \subsection*{Follow the guide of Javadoc style at \url{http://en.wikipedia.org/wiki/Javadoc} to document the command {\ttfamily receive} in the interface {\ttfamily Receive}.}
 \setcounter{subsubsection}{0}
