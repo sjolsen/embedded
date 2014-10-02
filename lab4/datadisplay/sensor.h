@@ -2,7 +2,7 @@
 #define SENDEMO_H
 
 enum {
-  AM_SENSEMSG = 6,
+  AM_SENSEMSG = 17,
 };
 
 typedef nx_struct SenseMsg {

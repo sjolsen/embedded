@@ -2,7 +2,7 @@
 #define SENDEMO_H
 
 enum {
-  RADIOID = 6,
+  RADIOID = 17,
 };
 
 typedef nx_struct SenseMsg {
