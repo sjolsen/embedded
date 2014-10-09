@@ -10,12 +10,18 @@ module SensorC {
 		interface Leds;
 		interface Timer<TMilli>;
 		interface Read<uint16_t>;
+
+		interface Packet;
+		interface AMSend;
+		interface SplitControl;
 	}
 }
 
 implementation {
 	uint16_t measurements [NMEASUREMENTS];
 	size_t cursor;
+	message_t pkt;
+	uint16_t cnt;
 
 	void add_measurement (uint16_t val) {
 		measurements [cursor] = val;
@@ -31,12 +37,20 @@ implementation {
 		return sum / NMEASUREMENTS;
 	}
 
+	void send_value (uint16_t val) {
+		SenseMsg* rmsg = (SenseMsg*)(call Packet.getPayload(&pkt, sizeof(SenseMsg)));
+		rmsg->val = val;
+		rmsg->cnt = cnt++;
+		call AMSend.send(ReceiverID, &pkt, sizeof(SenseMsg));
+	}
+
 	event void Boot.booted() {
 		size_t i;
 		for (i = 0; i < NMEASUREMENTS; ++i)
 			measurements [i] = 0x180;
 		cursor = 0;
-		call Timer.startPeriodic(2000);
+		cnt = 0;
+		call SplitControl.start();
 	}
 
 	event void Timer.fired() {
@@ -55,5 +69,16 @@ implementation {
 			call Leds.led1Off ();
 			call Leds.led2On ();
 		}
+		send_value (get_average ());
 	}
+
+	event void AMSend.sendDone (message_t* msg, error_t error) {
+	}
+
+	event void SplitControl.startDone(error_t err) {
+		if (err == SUCCESS) call Timer.startPeriodic(2000);
+		else call SplitControl.start();
+	}
+
+	event void SplitControl.stopDone(error_t err) {}
 }

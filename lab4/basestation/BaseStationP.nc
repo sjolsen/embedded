@@ -35,10 +35,11 @@ implementation
 
   event message_t * RadioReceive.receive(message_t *msg, void *payload, uint8_t len) {
     call SerialSend.send(0, msg, sizeof(SenseMsg));
+    call Leds.led0Toggle();
     return msg;
   }
 
   event void SerialSend.sendDone(message_t *msg, error_t error) {
   }
 
-}  
+}
