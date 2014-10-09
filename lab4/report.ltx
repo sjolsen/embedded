@@ -1,7 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage{fullpage}
 \usepackage{listings}
-\lstset{basicstyle=\ttfamily}
+\lstset{basicstyle=\ttfamily,tabsize=2}
 
 \title{Lab Report -- Sensing Light}
 \author{
@@ -18,6 +18,15 @@ The task of this lab was to implement a light sensor which samples light levels 
 I learned how to use the \lstinline{Read} interface and that AM radio communication requires the use of \lstinline{SplitControl}.
 
 \section*{Implementation}
+I used an array to keep a moving window of measurements, from which the average is computed on demand. Each firing of the timer, a measurement is added and the average is displayed and sent to the base station.
+
+The components used and the way in which they are wired is:
+
+\lstinputlisting[firstline=2,lastline=17]{sensor/SensorApp.nc}
+
+The interfaces used were:
+
+\lstinputlisting[firstline=7,lastline=18]{sensor/SensorC.nc}
 
 \section*{Experiment}
 
