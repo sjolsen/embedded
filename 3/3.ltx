@@ -86,8 +86,18 @@ Board I/O can negatively impact a system's performance by {\em bottlenecking} th
 \subsection[i]{Assume a CPU has pins connected to a AD7304 chip. The CPU will send {\ttfamily 0x7D} to channel C of the chip.}
 
 \subsubsection*{What is in the data frame?}
+\begin{center}
+  \begin{tabular}[c]{|*{2}{c|}|*{2}{c|}|*{8}{c|}}
+    \hline
+    {\bf SA} & {\bf SI} & {\bf A1} & {\bf A0} & {\bf D7} & {\bf D6} & {\bf D5} & {\bf D4} & {\bf D3} & {\bf D2} & {\bf D1} & {\bf D0}\\
+    \hline
+    {\tt 1} & {\tt 1} & {\tt 1} & {\tt 0} & {\tt 0} & {\tt 1} & {\tt 1} & {\tt 1} & {\tt 1} & {\tt 1} & {\tt 0} & {\tt 1}\\
+    \hline
+  \end{tabular}
+\end{center}
 
 \subsubsection*{What is the timing diagram for this transmission?}
+{\itshape See attached.}
 
 \subsection[ii]{Assume two devices are using UART for communication. The sending device has a clock of \SI{9600}{\hertz} and sends data at \SI{9600}{\bit\per\second}. The receiving device has a clock of \SI{200}{\kilo\hertz} and uses a counter to generate a slower clock for receiving data. For example, the device lets the counter count from $0$ to $9$ periodically. Then, the device generates a clock of \SI{20}{\kilo\hertz}. Assume the counter must be a multiple of $16$ due to the design inside the hardware. Hence, the receiving device can only generate a receiving clock close to \SI{9600}{\hertz}.}
 
