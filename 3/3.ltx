@@ -102,7 +102,31 @@ Board I/O can negatively impact a system's performance by {\em bottlenecking} th
 \subsection[ii]{Assume two devices are using UART for communication. The sending device has a clock of \SI{9600}{\hertz} and sends data at \SI{9600}{\bit\per\second}. The receiving device has a clock of \SI{200}{\kilo\hertz} and uses a counter to generate a slower clock for receiving data. For example, the device lets the counter count from $0$ to $9$ periodically. Then, the device generates a clock of \SI{20}{\kilo\hertz}. Assume the counter must be a multiple of $16$ due to the design inside the hardware. Hence, the receiving device can only generate a receiving clock close to \SI{9600}{\hertz}.}
 
 \subsubsection*{Assume the receiving clock is faster than \SI{9600}{\hertz}. What is the maximum frame size (including all start and stop bits)?}
+Frame size is bounded by the inequality
+
+\begin{align*}
+  \mathrm{frame\ size} < \frac{f_s}{|\Delta f|}.
+\end{align*}
+
+From this, it can be seen that the frame size is maximized when $|\Delta f|$ is minimized--- that is, when $f_s$ and $f_r$ are closest. $f_s$ is fixed at \SI{9600}{\hertz}. The closest possible value of $f_r$ above this is $\frac{1}{16} \cdot \SI{200}{\kilo\hertz} = \SI{12500}{\hertz}$. This gives $|\Delta f| = \SI{2900}{\hertz}$. Then,
+
+\begin{align*}
+  \mathrm{frame\ size} &< \frac{f_s}{|\Delta f|}\\
+  \mathrm{frame\ size} &< \frac{\SI{9600}{\hertz}}{\SI{2900}{\hertz}}\\
+  \mathrm{frame\ size} &< {\sim}3.310.
+\end{align*}
+
+Because the frame size must be an integer, the maximum frame size is \fbox{3}.
 
 \subsubsection*{Assume the receiving clock is slower than \SI{9600}{\hertz}. What is the maximum frame size (including all start and stop bits)?}
+The closest possible value of $f_r$ below $f_s$ is $\frac{1}{32} \cdot \SI{200}{\kilo\hertz} = \SI{6250}{\hertz}$. This gives $|\Delta f| = \SI{3350}{\hertz}$. Then,
+
+\begin{align*}
+  \mathrm{frame\ size} &< \frac{f_s}{|\Delta f|}\\
+  \mathrm{frame\ size} &< \frac{\SI{9600}{\hertz}}{\SI{3350}{\hertz}}\\
+  \mathrm{frame\ size} &< {\sim}2.866.
+\end{align*}
+
+Then, the maximum frame size is \fbox{2}.
 
 \end{document}
