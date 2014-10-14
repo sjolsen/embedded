@@ -1,0 +1,57 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily}
+\usepackage{graphicx}
+\usepackage[binary-units]{siunitx}
+\DeclareSIUnit{\degreeFahrenheit}{\degree F}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\newcommand{\SIfrac}[3]{
+  {\ensuremath{\frac{\num{#1}}{\num{#2}}\,\si{#3}}}
+}
+
+\title{CS 3468 -- Homework 3}
+\author{Stuart Olsen}
+
+\begin{document}
+\maketitle
+
+\section*{Chapter 6}
+\subsection*{What is the purpose of I/O on a board?}
+
+\subsection*{List five categories of board I/O with two real-world examples under each category.}
+
+\subsection*{What is the difference between serial and parallel I/O?}
+
+\subsection*{Give a real-world I/O example of each.}
+
+\subsection*{What is the difference between simplex, half-duplex, and full duplex transmission?}
+
+\subsection*{Indicate which transmission scheme is shown in Figures 6-27a, b, and c.}
+
+\subsection*{What is asynchronous transfer of serial data?}
+
+\subsection*{Draw a diagram that describes how asynchronous transfer of serial data works.}
+
+\subsection*{What is synchronous transfer of serial data?}
+
+\subsection*{Draw and describe how synchronous transfer of serial data works.}
+
+\subsection*{How can board I/O negatively impact a system's performance?}
+
+\section*{Additional Questions}
+\subsection[i]{Assume a CPU has pins connected to a AD7304 chip. The CPU will send {\ttfamily 0x7D} to channel C of the chip.}
+
+\subsubsection*{What is in the data frame?}
+
+\subsubsection*{What is the timing diagram for this transmission?}
+
+\subsection[ii]{Assume two devices are using UART for communication. The sending device has a clock of \SI{9600}{\hertz} and sends data at \SI{9600}{\bit\per\second}. The receiving device has a clock of \SI{200}{\kilo\hertz} and uses a counter to generate a slower clock for receiving data. For example, the device lets the counter count from $0$ to $9$ periodically. Then, the device generates a clock of \SI{20}{\kilo\hertz}. Assume the counter must be a multiple of $16$ due to the design inside the hardware. Hence, the receiving device can only generate a receiving clock close to \SI{9600}{\hertz}.}
+
+\subsubsection*{Assume the receiving clock is faster than \SI{9600}{\hertz}. What is the maximum frame size (including all start and stop bits)?}
+
+\subsubsection*{Assume the receiving clock is slower than \SI{9600}{\hertz}. What is the maximum frame size (including all start and stop bits)?}
+
+\end{document}
