@@ -2,6 +2,8 @@
 \usepackage{fullpage}
 \usepackage{listings}
 \lstset{basicstyle=\ttfamily,tabsize=2}
+\usepackage{multirow}
+\usepackage{hhline}
 
 \title{Lab Report -- Sensing Light}
 \author{
@@ -29,5 +31,66 @@ The interfaces used were:
 \lstinputlisting[firstline=7,lastline=18]{sensor/SensorC.nc}
 
 \section*{Experiment}
+The following data were collected:
+
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    {\bf Data 1} & {\bf Data 2} & {\bf Data 3} & {\bf Average} & {\bf Deviation}\\
+    \hline
+    0x32a & 0x32d & 0x32e & 812 & 2.08\\
+    \hline
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    {\bf Angle} & {\bf Distance (ft)} & {\bf Data 1} & {\bf Data 2} & {\bf Data 3} & {\bf Average} & {\bf Deviation}\\
+    \hline
+    \multirow{5}{*}{0} & 0.5 & 0x398 & 0x398 & 0x397 & 920 & 0.58\\
+    \cline{2-7}
+    & 1.0 & 0x376 & 0x375 & 0x372 & 884 & 2.08\\
+    \cline{2-7}
+    & 1.5 & 0x36c & 0x36b & 0x36a & 875 & 1.00\\
+    \cline{2-7}
+    & 2.0 & 0x34e & 0x34e & 0x34d & 846 & 0.58\\
+    \cline{2-7}
+    & 3.0 & 0x33b & 0x33a & 0x33a & 826 & 0.58\\
+    \hhline{|=======|}
+    \multirow{5}{*}{30} & 0.5 & 0x38a & 0x38c & 0x38d & 908 & 1.53\\
+    \cline{2-7}
+    & 1.0 & 0x358 & 0x358 & 0x358 & 856 & 0.00\\
+    \cline{2-7}
+    & 1.5 & 0x34a & 0x34b & 0x349 & 842 & 1.00\\
+    \cline{2-7}
+    & 2.0 & 0x342 & 0x342 & 0x341 & 834 & 0.58\\
+    \cline{2-7}
+    & 3.0 & 0x341 & 0x341 & 0x341 & 833 & 0.00\\
+    \hhline{|=======|}
+    \multirow{5}{*}{60} & 0.5 & 0x37a & 0x37c & 0x37d & 892 & 1.53\\
+    \cline{2-7}
+    & 1.0 & 0x35c & 0x35d & 0x35d & 861 & 0.58\\
+    \cline{2-7}
+    & 1.5 & 0x33d & 0x33d & 0x33d & 829 & 0.00\\
+    \cline{2-7}
+    & 2.0 & 0x336 & 0x332 & 0x332 & 819 & 2.31\\
+    \cline{2-7}
+    & 3.0 & 0x334 & 0x334 & 0x335 & 820 & 0.58\\
+    \hhline{|=======|}
+    \multirow{5}{*}{90} & 0.5 & 0x335 & 0x332 & 0x333 & 819 & 1.53\\
+    \cline{2-7}
+    & 1.0 & 0x32c & 0x32d & 0x32c & 812 & 0.58\\
+    \cline{2-7}
+    & 1.5 & 0x337 & 0x337 & 0x337 & 823 & 0.00\\
+    \cline{2-7}
+    & 2.0 & 0x330 & 0x32f & 0x32f & 815 & 0.58\\
+    \cline{2-7}
+    & 3.0 & 0x32f & 0x32c & 0x32d & 813 & 1.53\\
+    \hline
+  \end{tabular}
+\end{center}
+
+The data show a correlation between angle and brightness; as the light source moves from overhead to the side, the detected light level decreases. There is also a correlation between distance and brightness; as the light is moved farther away, the detected light level decreases.
 
 \end{document}
