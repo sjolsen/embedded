@@ -28,7 +28,11 @@ implementation {
 		call SplitControl.start();
 	}
 
-	event void SplitControl.startDone(error_t error) {}
+	event void SplitControl.startDone(error_t error) {
+                char* payload = (char*) call AMSend.getPayload (&pkt, 1);
+                *payload = counter;
+                call AMSend.send (0, &pkt, 1);
+        }
 
 	event void SplitControl.stopDone(error_t error) {}
 
