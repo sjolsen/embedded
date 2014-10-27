@@ -1,0 +1,55 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\title{CS 3468 -- Homework 4}
+\author{Stuart Olsen}
+
+\begin{document}
+\maketitle
+
+\section*{Chapter 4}
+\subsection*{What is an ISA?}
+
+\subsection*{What features does an ISA define?}
+
+\subsection*{Name and describe the three most common ISA models on which architectures are based.}
+
+\subsection*{Name and describe two types of ISAs that fall under each of the three ISA models.}
+
+\subsection*{According to the von Neumann model, list and define the major components of the CPU.}
+
+\subsection*{Draw and describe the memory hierarchy of an embedded system.}
+
+\subsection*{Name and describe the two most common type of units that manage memory.}
+
+\section*{Additional Questions}
+\subsection*{Draw the layout of the data memory space in the ATmega128 (i.e., general registers, I/O registers, and data).}
+
+\subsection*{Find the memory address and the I/O address (if available) for the following special registers:}
+\begin{itemize}
+\item I/O registers for port A: {\ttfamily PORTA}, {\ttfamily DDRA}, {\ttfamily PINA}
+\item Stack pointer registers: {\ttfamily SPH}, {\ttfamily SPL}
+\item Status register: {\ttfamily SREG}
+\item MCU control register: {\ttfamily MCUCR}
+\item Interrupt control and status registers: {\ttfamily EIMSK}, {\ttfamily EIFR}
+\item USART0 registers: {\ttfamily UDR0}, {\ttfamily UCSR0A}, {\ttfamily UCSR0B}, {\ttfamily UCSR0C}, {\ttfamily UBRR0H}, {\ttfamily UBRR0L}
+\end{itemize}
+
+\subsection*{Dynamic Voltage Scaling (DVS) is a technique to control energy consumption of a processor. It is based on the two equations below, where $V$ is the voltage supplied to the processor, $P$ is the power consumption, and $f$ is the scaled processor frequency. Assume $C = \SI{2.75}{\watt\per\volt^2}$, $F = \SI{3.8}{\giga\hertz}$, and $K = \SI{1.563}{\volt}$.}
+
+\begin{align}
+  P &= C \cdot V^2\\
+  f &= F \cdot (1 - \frac{K}{V})
+\end{align}
+
+\subsubsection*{If $V = \SI{3}{\volt}$, what are $P$ and $f$? What is the total energy consumed by the task?}
+
+\subsubsection*{If $V = \SI{2}{\volt}$, what are $P$ and $f$? What is the total energy consumed by the task?}
+
+\end{document}
