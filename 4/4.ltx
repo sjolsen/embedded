@@ -64,15 +64,37 @@ Generally, the forms of memory near the top of the hierarchy are faster than mem
 \begin{itemize}
 \item I/O registers for port A
   \begin{itemize}
-  \item {\ttfamily PORTA}
-  \item  {\ttfamily DDRA}
-  \item  {\ttfamily PINA}
+  \item {\ttfamily PORTA}: {\ttfamily \$1B}
+  \item {\ttfamily DDRA}: {\ttfamily \$1A}
+  \item {\ttfamily PINA}: {\ttfamily \$19}
   \end{itemize}
-\item Stack pointer registers: {\ttfamily SPH}, {\ttfamily SPL}
-\item Status register: {\ttfamily SREG}
-\item MCU control register: {\ttfamily MCUCR}
-\item Interrupt control and status registers: {\ttfamily EIMSK}, {\ttfamily EIFR}
-\item USART0 registers: {\ttfamily UDR0}, {\ttfamily UCSR0A}, {\ttfamily UCSR0B}, {\ttfamily UCSR0C}, {\ttfamily UBRR0H}, {\ttfamily UBRR0L}
+\item Stack pointer registers
+  \begin{itemize}
+  \item {\ttfamily SPH}: {\ttfamily \$3E}
+  \item {\ttfamily SPL}: {\ttfamily \$3D}
+  \end{itemize}
+\item Status register
+  \begin{itemize}
+  \item {\ttfamily SREG}: {\ttfamily \$3F}
+  \end{itemize}
+\item MCU control register
+  \begin{itemize}
+  \item {\ttfamily MCUCR}: {\ttfamily \$35}
+  \end{itemize}
+\item Interrupt control and status registers
+  \begin{itemize}
+  \item {\ttfamily EIMSK}: {\ttfamily \$39}
+  \item {\ttfamily EIFR}: {\ttfamily \$38}
+  \end{itemize}
+\item USART0 registers
+  \begin{itemize}
+  \item {\ttfamily UDR0}: {\ttfamily \$0C}
+  \item {\ttfamily UCSR0A}: {\ttfamily \$0B}
+  \item {\ttfamily UCSR0B}: {\ttfamily \$0A}
+  \item {\ttfamily UCSR0C}: {\ttfamily (\$95)}
+  \item {\ttfamily UBRR0H}: {\ttfamily (\$90)}
+  \item {\ttfamily UBRR0L}: {\ttfamily \$09}
+  \end{itemize}
 \end{itemize}
 
 \subsection*{Dynamic Voltage Scaling (DVS) is a technique to control energy consumption of a processor. It is based on the two equations below, where $V$ is the voltage supplied to the processor, $P$ is the power consumption, and $f$ is the scaled processor frequency. Assume $C = \SI{2.75}{\watt\per\volt^2}$, $F = \SI{3.8}{\giga\hertz}$, and $K = \SI{1.563}{\volt}$.}
