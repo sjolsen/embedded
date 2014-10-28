@@ -15,18 +15,40 @@
 
 \section*{Chapter 4}
 \subsection*{What is an ISA?}
+An {\em Instruction Set Architecture} (ISA) is the set of features that are built into an architecture's instruction set.
 
 \subsection*{What features does an ISA define?}
+An ISA defines operations, operands, storage, addressing modes, and interrupt handling.
 
 \subsection*{Name and describe the three most common ISA models on which architectures are based.}
+The {\em Complex Instruction Set Computing} (CISC) model is characterized by complex operations comprised of a families of instructions. The {\em Reduced Instruction Set Computing} (RISC) model, on the other hand, is characterized by few and simple instructions. {\em Instruction-Level Parallelism} (ILP) models extend the RISC model to allow issuing multiple instructions in parallel.
 
 \subsection*{Name and describe two types of ISAs that fall under each of the three ISA models.}
+CISC ISAs include Intel's IA32 family of instruction set architectures and DEC's VAX ISA. RISC ISAs include the MIPS ISA family and ARM. Intel's modern IA32 implementations fall under the ILP model as well, as they heavily leverage out-of-order superscalar execution; their IA64 architecture, designed around a VLIW model, is also an ILP architecture.
 
 \subsection*{According to the von Neumann model, list and define the major components of the CPU.}
+\begin{itemize}
+\item Arithmetic Logic Unit -- the component which implements the ISA's operations
+\item Registers -- a type of fast memory
+\item Control Unit -- the component which manages the fetch/execute cycle
+\item Internal Buses -- the mechanism responsible for interconnecting the above components
+\end{itemize}
 
 \subsection*{Draw and describe the memory hierarchy of an embedded system.}
+\begin{figure}
+  \centering\includegraphics{memory-hierarchy.pdf}
+  \caption{Embedded system memory hierarchy}
+  \label{fig:memory-hierarchy}
+\end{figure}
+
+According to Figure \ref{fig:memory-hierarchy}, Level 1 Cache is at the top of the memory hierarchy, implemented within the processor itself. Further levels of cache may exist between Level 1 and Main Memory, the latter of which is usually located in one or more separate on-board components.
+
+Below Main Memory in the memory hierarchy are Secondary and Tertiary Storage, which may take the form of mass storage devices such as flash, magnetic, or optical media, or may take the form of a network resource.
+
+Generally, the forms of memory near the top of the hierarchy are faster than memory at lower levels, but are more expensive and thus smaller.
 
 \subsection*{Name and describe the two most common type of units that manage memory.}
+{\em Memory controllers} (MEMCs) implements thin interfaces between different types of memory within a system, such as SRAM and DRAM. {\em Memory management units} (MMUs) handle logical address translation, caching, and bus arbitration.
 
 \section*{Additional Questions}
 \subsection*{Draw the layout of the data memory space in the ATmega128 (i.e., general registers, I/O registers, and data).}
