@@ -100,11 +100,25 @@ Generally, the forms of memory near the top of the hierarchy are faster than mem
 \subsection*{Dynamic Voltage Scaling (DVS) is a technique to control energy consumption of a processor. It is based on the two equations below, where $V$ is the voltage supplied to the processor, $P$ is the power consumption, and $f$ is the scaled processor frequency. Assume $C = \SI{2.75}{\watt\per\volt^2}$, $F = \SI{3.8}{\giga\hertz}$, and $K = \SI{1.563}{\volt}$.}
 
 \begin{align}
-  P &= C \cdot V^2\\
-  f &= F \cdot (1 - \frac{K}{V})
+  \label{eqn:power} P &= C \cdot V^2\\
+  \label{eqn:frequency} f &= F \cdot (1 - \frac{K}{V})
 \end{align}
 
 \subsubsection*{If $V = \SI{3}{\volt}$, what are $P$ and $f$? What is the total energy consumed by the task?}
+From equation \ref{eqn:power}, we have
+
+\begin{align*}
+  P &= C \cdot V^2\\
+  &= \SI{2.75}{\watt\per\volt^2} \cdot (\SI{3}{\volt})^2\\
+  &= \fbox{\SI{24.75}{\volt}}
+\end{align*}
+
+and from equation \ref{eqn:frequency}, we have
+
+\begin{align*}
+  f &= F \cdot (1 - \frac{K}{V})\\
+  &= \SI{3.8}{\giga\hertz} \cdot (1 - \frac{\SI{1.563}{\volt}}{V})\\
+\end{align*}
 
 \subsubsection*{If $V = \SI{2}{\volt}$, what are $P$ and $f$? What is the total energy consumed by the task?}
 
