@@ -52,10 +52,22 @@ Generally, the forms of memory near the top of the hierarchy are faster than mem
 
 \section*{Additional Questions}
 \subsection*{Draw the layout of the data memory space in the ATmega128 (i.e., general registers, I/O registers, and data).}
+\begin{figure}
+  \centering\includegraphics{atmega128-memory.pdf}
+  \caption{ATmega128 Data Memory Space}
+  \label{fig:atmega128-memory}
+\end{figure}
+
+{\itshape See Figure \ref{fig:atmega128-memory}.}
 
 \subsection*{Find the memory address and the I/O address (if available) for the following special registers:}
 \begin{itemize}
-\item I/O registers for port A: {\ttfamily PORTA}, {\ttfamily DDRA}, {\ttfamily PINA}
+\item I/O registers for port A
+  \begin{itemize}
+  \item {\ttfamily PORTA}
+  \item  {\ttfamily DDRA}
+  \item  {\ttfamily PINA}
+  \end{itemize}
 \item Stack pointer registers: {\ttfamily SPH}, {\ttfamily SPL}
 \item Status register: {\ttfamily SREG}
 \item MCU control register: {\ttfamily MCUCR}

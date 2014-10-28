@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="569.31293"
+   height="400.67938"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="atmega128-memory.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.0681152"
+     inkscape:cx="123.95966"
+     inkscape:cy="105.25252"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="in"
+     inkscape:window-width="1920"
+     inkscape:window-height="1056"
+     inkscape:window-x="1280"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-7.4400177,-252.91423)">
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMRoman10;-inkscape-font-specification:LMRoman10"
+       x="141.97137"
+       y="262.93823"
+       id="text3868"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3870"
+         x="141.97137"
+         y="262.93823">Data Memory Configuration A</tspan></text>
+    <g
+       id="g3956"
+       transform="translate(-99.851265,-184.61018)">
+      <rect
+         y="466.28067"
+         x="107.66628"
+         height="25.110182"
+         width="179.75589"
+         id="rect3098"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3872"
+         y="482.93375"
+         x="197.49942"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMRoman10;-inkscape-font-specification:LMRoman10"
+         xml:space="preserve"><tspan
+           y="482.93375"
+           x="197.49942"
+           id="tspan3874"
+           sodipodi:role="line">32 General-Purpose Registers</tspan></text>
+    </g>
+    <g
+       id="g3961"
+       transform="translate(-102.51633,-188.29453)">
+      <rect
+         y="495.0752"
+         x="110.33135"
+         height="25.110182"
+         width="179.75589"
+         id="rect3098-3"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3876"
+         y="511.72827"
+         x="200.16449"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMRoman10;-inkscape-font-specification:LMRoman10"
+         xml:space="preserve"><tspan
+           y="511.72827"
+           x="200.16449"
+           id="tspan3878"
+           sodipodi:role="line">64 I/O Registers</tspan></text>
+    </g>
+    <g
+       id="g3966"
+       transform="translate(-258.82286,-203.99821)">
+      <rect
+         y="535.88904"
+         x="266.63788"
+         height="25.110182"
+         width="179.75589"
+         id="rect3098-7"
+         style="fill:#e9e9e9;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3882"
+         y="552.54211"
+         x="356.18903"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMRoman10;-inkscape-font-specification:LMRoman10"
+         xml:space="preserve"><tspan
+           y="552.54211"
+           x="356.18903"
+           id="tspan3884"
+           sodipodi:role="line">160 External I/O Registers</tspan></text>
+    </g>
+    <g
+       id="g4060"
+       transform="translate(-154.41203,-85.552184)">
+      <rect
+         y="442.55319"
+         x="162.22705"
+         height="50.970001"
+         width="179.75589"
+         id="rect3098-9"
+         style="fill:#e9e9e9;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3886"
+         y="463.3342"
+         x="252.17082"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMRoman10;-inkscape-font-specification:LMRoman10"
+         xml:space="preserve"><tspan
+           y="463.3342"
+           x="252.17082"
+           id="tspan3888"
+           sodipodi:role="line">Internal SRAM</tspan><tspan
+           id="tspan3890"
+           y="478.3342"
+           x="252.17082"
+           sodipodi:role="line">(4096 × 8)</tspan></text>
+    </g>
+    <g
+       id="g4054"
+       transform="translate(-154.41203,-85.552184)">
+      <rect
+         y="493.52319"
+         x="162.22705"
+         height="118.2706"
+         width="179.75589"
+         id="rect3098-9-0"
+         style="fill:#e9e9e9;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3892"
+         y="547.95447"
+         x="252.14081"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMRoman10;-inkscape-font-specification:LMRoman10"
+         xml:space="preserve"><tspan
+           y="547.95447"
+           x="252.14081"
+           id="tspan3894"
+           sodipodi:role="line">External SRAM</tspan><tspan
+           id="tspan3896"
+           y="562.95447"
+           x="252.14081"
+           sodipodi:role="line">(0 – 65536 × 8)</tspan></text>
+    </g>
+    <g
+       id="g4089"
+       transform="translate(-143.17991,-127.84332)"
+       style="fill:#ffffff;fill-opacity:1">
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="rect3098-9-0-0"
+         d="m 150.99493,654.08496 179.75589,0 0,21.7182 -179.75589,31.69581 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 1.5;stroke-dashoffset:0" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="rect3098-9-0-0-0"
+         d="m 330.75082,781.06194 -179.75589,0 0,-64.05431 179.75589,-31.69581 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 1.5;stroke-dashoffset:0" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMono10;-inkscape-font-specification:LMMono10"
+       x="235.97496"
+       y="297.8916"
+       id="text4093"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4095"
+         x="235.97496"
+         y="297.8916">$0000 – $001F</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMono10;-inkscape-font-specification:LMMono10"
+       x="235.97496"
+       y="323.00177"
+       id="text4093-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4095-8"
+         x="235.97496"
+         y="323.00177">$0020 – $005F</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMono10;-inkscape-font-specification:LMMono10"
+       x="235.97496"
+       y="348.11194"
+       id="text4093-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4095-3"
+         x="235.97496"
+         y="348.11194">$0060 – $00FF</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMono10;-inkscape-font-specification:LMMono10"
+       x="210.75621"
+       y="424.19208"
+       id="text4093-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4095-0"
+         x="210.75621"
+         y="424.19208">$1100</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMono10;-inkscape-font-specification:LMMono10"
+       x="210.75621"
+       y="373.22211"
+       id="text4093-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4095-88"
+         x="210.75621"
+         y="373.22211">$0100</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMono10;-inkscape-font-specification:LMMono10"
+       x="210.75621"
+       y="399.08194"
+       id="text4093-0-3"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4095-0-3"
+         x="210.75621"
+         y="399.08194">$10FF</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMono10;-inkscape-font-specification:LMMono10"
+       x="210.75621"
+       y="644.32953"
+       id="text4093-0-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4095-0-38"
+         x="210.75621"
+         y="644.32953">$FFFF</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMRoman10;-inkscape-font-specification:LMRoman10"
+       x="442.19354"
+       y="262.86124"
+       id="text3868-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3870-3"
+         x="442.19354"
+         y="262.86124">Data Memory Configuration B</tspan></text>
+    <g
+       id="g3956-7"
+       transform="translate(200.37091,-184.61018)">
+      <rect
+         y="466.28067"
+         x="107.66628"
+         height="25.110182"
+         width="179.75589"
+         id="rect3098-1"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3872-4"
+         y="482.93375"
+         x="197.49942"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMRoman10;-inkscape-font-specification:LMRoman10"
+         xml:space="preserve"><tspan
+           y="482.93375"
+           x="197.49942"
+           id="tspan3874-8"
+           sodipodi:role="line">32 General-Purpose Registers</tspan></text>
+    </g>
+    <g
+       id="g3961-9"
+       transform="translate(197.70585,-188.29453)">
+      <rect
+         y="495.0752"
+         x="110.33135"
+         height="25.110182"
+         width="179.75589"
+         id="rect3098-3-1"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3876-9"
+         y="511.72827"
+         x="200.16449"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMRoman10;-inkscape-font-specification:LMRoman10"
+         xml:space="preserve"><tspan
+           y="511.72827"
+           x="200.16449"
+           id="tspan3878-1"
+           sodipodi:role="line">64 I/O Registers</tspan></text>
+    </g>
+    <g
+       id="g4060-8"
+       transform="translate(145.81015,-110.66236)">
+      <rect
+         y="442.55319"
+         x="162.22705"
+         height="50.970001"
+         width="179.75589"
+         id="rect3098-9-01"
+         style="fill:#e9e9e9;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text3886-7"
+         y="463.3342"
+         x="252.17082"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMRoman10;-inkscape-font-specification:LMRoman10"
+         xml:space="preserve"><tspan
+           y="463.3342"
+           x="252.17082"
+           id="tspan3888-1"
+           sodipodi:role="line">Internal SRAM</tspan><tspan
+           id="tspan3890-3"
+           y="478.3342"
+           x="252.17082"
+           sodipodi:role="line">(4096 × 8)</tspan></text>
+    </g>
+    <rect
+       style="fill:#e9e9e9;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect3098-9-0-00"
+       width="179.75589"
+       height="143.38087"
+       x="308.0372"
+       y="382.86087" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMRoman10;-inkscape-font-specification:LMRoman10"
+       x="397.95096"
+       y="449.84732"
+       id="text3892-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3894-6"
+         x="397.95096"
+         y="449.84732">External SRAM</tspan><tspan
+         sodipodi:role="line"
+         x="397.95096"
+         y="464.84732"
+         id="tspan3896-6">(0 – 65536 × 8)</tspan></text>
+    <g
+       id="g4089-6"
+       transform="translate(157.04227,-127.84332)"
+       style="fill:#ffffff;fill-opacity:1">
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="rect3098-9-0-0-2"
+         d="m 150.99493,654.08507 179.75589,-1.1e-4 0,21.7182 -179.75589,31.69581 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 1.5;stroke-dashoffset:0" />
+      <path
+         sodipodi:nodetypes="ccccc"
+         inkscape:connector-curvature="0"
+         id="rect3098-9-0-0-0-9"
+         d="m 330.75082,781.06194 -179.75589,0 0,-64.05431 179.75589,-31.69581 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.75;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:3, 1.5;stroke-dashoffset:0" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMono10;-inkscape-font-specification:LMMono10"
+       x="536.19714"
+       y="297.8916"
+       id="text4093-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4095-33"
+         x="536.19714"
+         y="297.8916">$0000 – $001F</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMono10;-inkscape-font-specification:LMMono10"
+       x="536.19714"
+       y="323.00177"
+       id="text4093-1-7"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4095-8-3"
+         x="536.19714"
+         y="323.00177">$0020 – $005F</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMono10;-inkscape-font-specification:LMMono10"
+       x="510.97839"
+       y="348.11194"
+       id="text4093-3-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4095-3-4"
+         x="510.97839"
+         y="348.11194">$0060</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMono10;-inkscape-font-specification:LMMono10"
+       x="510.97839"
+       y="373.22211"
+       id="text4093-2-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4095-88-9"
+         x="510.97839"
+         y="373.22211">$0FFF</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMono10;-inkscape-font-specification:LMMono10"
+       x="510.97839"
+       y="399.08194"
+       id="text4093-0-3-1"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4095-0-3-2"
+         x="510.97839"
+         y="399.08194">$1000</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMMono10;-inkscape-font-specification:LMMono10"
+       x="510.97839"
+       y="644.32953"
+       id="text4093-0-9-0"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4095-0-38-2"
+         x="510.97839"
+         y="644.32953">$FFFF</tspan></text>
+  </g>
+</svg>
