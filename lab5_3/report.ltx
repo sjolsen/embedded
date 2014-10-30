@@ -1,0 +1,28 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily,tabsize=2}
+\usepackage{multirow}
+\usepackage{hhline}
+
+\title{Lab Report -- Persistent Data}
+\author{
+  Stuart Olsen\\
+  so1132
+}
+
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+The task of this lab was to implement a counter of the number of soft resets performed by the system. I have learned how to use uninitialized data.
+
+\section*{Implementation}
+I implemented the counter using the \lstinline{.noinit} linker section. To ensure that the counter is set to zero on the first reset, I created a sentinel value in uninitialized memory. If it is not a specific value, the system has only been booted once, so the sentinel is set to the specific value and the counter is initialized to zero. If it is the specific value, the system has been initialized, so the counter is incremented.
+
+Counter values are sent and displayed the same way as data in previous labs, with the exception that data is sent using the UART instead of the radio.
+
+\section*{UART}
+I implemented the UART sending code by copying the radio sending code from a previous lab and using the \lstinline{SerialActiveMessageC} and \lstinline{SerialAMSenderC} components in lieu of \lstinline{ActiveMessageC} and \lstinline{AMSenderC}.
+
+\end{document}
