@@ -35,7 +35,7 @@ CISC ISAs include Intel's IA32 family of instruction set architectures and DEC's
 \end{itemize}
 
 \subsection*{Draw and describe the memory hierarchy of an embedded system.}
-\begin{figure}
+\begin{figure}[h]
   \centering\includegraphics{memory-hierarchy.pdf}
   \caption{Embedded system memory hierarchy}
   \label{fig:memory-hierarchy}
@@ -50,50 +50,49 @@ Generally, the forms of memory near the top of the hierarchy are faster than mem
 \subsection*{Name and describe the two most common type of units that manage memory.}
 {\em Memory controllers} (MEMCs) implements thin interfaces between different types of memory within a system, such as SRAM and DRAM. {\em Memory management units} (MMUs) handle logical address translation, caching, and bus arbitration.
 
+\newpage
 \section*{Additional Questions}
 \subsection*{Draw the layout of the data memory space in the ATmega128 (i.e., general registers, I/O registers, and data).}
-\begin{figure}
+\begin{figure}[h]
   \centering\includegraphics{atmega128-memory.pdf}
   \caption{ATmega128 Data Memory Space}
   \label{fig:atmega128-memory}
 \end{figure}
 
-{\itshape See Figure \ref{fig:atmega128-memory}.}
-
 \subsection*{Find the memory address and the I/O address (if available) for the following special registers:}
 \begin{itemize}
 \item I/O registers for port A
   \begin{itemize}
-  \item {\ttfamily PORTA}: {\ttfamily \$1B}
-  \item {\ttfamily DDRA}: {\ttfamily \$1A}
-  \item {\ttfamily PINA}: {\ttfamily \$19}
+  \item {\ttfamily PORTA}: {\ttfamily \$1B (\$3B)}
+  \item {\ttfamily DDRA}: {\ttfamily \$1A (\$3A)}
+  \item {\ttfamily PINA}: {\ttfamily \$19 (\$39)}
   \end{itemize}
 \item Stack pointer registers
   \begin{itemize}
-  \item {\ttfamily SPH}: {\ttfamily \$3E}
-  \item {\ttfamily SPL}: {\ttfamily \$3D}
+  \item {\ttfamily SPH}: {\ttfamily \$3E (\$5E)}
+  \item {\ttfamily SPL}: {\ttfamily \$3D (\$5D)}
   \end{itemize}
 \item Status register
   \begin{itemize}
-  \item {\ttfamily SREG}: {\ttfamily \$3F}
+  \item {\ttfamily SREG}: {\ttfamily \$3F (\$5F)}
   \end{itemize}
 \item MCU control register
   \begin{itemize}
-  \item {\ttfamily MCUCR}: {\ttfamily \$35}
+  \item {\ttfamily MCUCR}: {\ttfamily \$35 (\$55)}
   \end{itemize}
 \item Interrupt control and status registers
   \begin{itemize}
-  \item {\ttfamily EIMSK}: {\ttfamily \$39}
-  \item {\ttfamily EIFR}: {\ttfamily \$38}
+  \item {\ttfamily EIMSK}: {\ttfamily \$39 (\$59)}
+  \item {\ttfamily EIFR}: {\ttfamily \$38 (\$58)}
   \end{itemize}
 \item USART0 registers
   \begin{itemize}
-  \item {\ttfamily UDR0}: {\ttfamily \$0C}
-  \item {\ttfamily UCSR0A}: {\ttfamily \$0B}
-  \item {\ttfamily UCSR0B}: {\ttfamily \$0A}
-  \item {\ttfamily UCSR0C}: {\ttfamily (\$95)}
-  \item {\ttfamily UBRR0H}: {\ttfamily (\$90)}
-  \item {\ttfamily UBRR0L}: {\ttfamily \$09}
+  \item {\ttfamily UDR0}: {\ttfamily \$0C (\$2C)}
+  \item {\ttfamily UCSR0A}: {\ttfamily \$0B (\$2B)}
+  \item {\ttfamily UCSR0B}: {\ttfamily \$0A (\$2A)}
+  \item {\ttfamily UCSR0C}: {\ttfamily - (\$95)}
+  \item {\ttfamily UBRR0H}: {\ttfamily - (\$90)}
+  \item {\ttfamily UBRR0L}: {\ttfamily \$09 (\$29)}
   \end{itemize}
 \end{itemize}
 
@@ -110,16 +109,32 @@ From equation \ref{eqn:power}, we have
 \begin{align*}
   P &= C \cdot V^2\\
   &= \SI{2.75}{\watt\per\volt^2} \cdot (\SI{3}{\volt})^2\\
-  &= \fbox{\SI{24.75}{\volt}}
+  &\approx \fbox{\SI{25}{\volt}}
 \end{align*}
 
 and from equation \ref{eqn:frequency}, we have
 
 \begin{align*}
   f &= F \cdot (1 - \frac{K}{V})\\
-  &= \SI{3.8}{\giga\hertz} \cdot (1 - \frac{\SI{1.563}{\volt}}{V})\\
+  &= \SI{3.8}{\giga\hertz} \cdot (1 - \frac{\SI{1.563}{\volt}}{\SI{3}{\volt}})\\
+  &\approx \fbox{\SI{1.8}{\giga\hertz}}.
 \end{align*}
 
 \subsubsection*{If $V = \SI{2}{\volt}$, what are $P$ and $f$? What is the total energy consumed by the task?}
+From equation \ref{eqn:power}, we have
+
+\begin{align*}
+  P &= C \cdot V^2\\
+  &= \SI{2.75}{\watt\per\volt^2} \cdot (\SI{2}{\volt})^2\\
+  &= \fbox{\SI{11}{\volt}}
+\end{align*}
+
+and from equation \ref{eqn:frequency}, we have
+
+\begin{align*}
+  f &= F \cdot (1 - \frac{K}{V})\\
+  &= \SI{3.8}{\giga\hertz} \cdot (1 - \frac{\SI{1.563}{\volt}}{\SI{2}{\volt}})\\
+  &\approx \fbox{\SI{830}{\mega\hertz}}.
+\end{align*}
 
 \end{document}
