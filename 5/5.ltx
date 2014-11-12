@@ -51,8 +51,15 @@ MMU and on-chip memory drivers are architecture-specific; PCI and USB drivers ar
 \end{itemize}
 
 \subsection*{What is the difference between an auto-vectored and an interrupt-vectored scheme?}
+An interrupt-vectored system provides for the ability to use different code to handle different interrupts; in an auto-vectored scheme, it is the responsibility of the single interrupt handler to discriminate between interrupts.
 
 \subsection*{Name and describe four examples of device driver functions that can be implemented for I/O.}
+\begin{itemize}
+\item {\it I/O Acquire} allows software to gain singular access to I/O.
+\item {\it I/O Release} allows software to free or unlock I/O.
+\item {\it I/O Read} allows software to read data from I/O.
+\item {\it I/O Write} allows software to write data to I/O.
+\end{itemize}
 
 \section*{Additional Questions}
 \subsection*{In ATmega128, assume a 32-bit integer $A$ is stored in {\tt r4:r7}, and another 32-bit integer $B$ is stored in {\tt r8:r11}.}
