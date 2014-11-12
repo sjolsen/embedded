@@ -3,10 +3,25 @@
 start:
 	; Set up the stack
 	ldi r16, low(RAMEND)
+	ldi r17, high(RAMEND)
 	out SPL, r16
-	ldi r16, high(RAMEND)
-	out SPH, r16
+	out SPH, r17
+	; Clear data memory
+	ldi XL, low(SRAM_START)
+	ldi XH, high(SRAM_START)
+	ldi r18, 0x00
+clrloop:
+	cp XL, r16
+	cpc XH, r17
+	breq clrdone
+	st X+, r18
+	rjmp clrloop
+clrdone:
+	; Clear SREG
+	out SREG, r18
+	; Jump to user code
 	call add32a
+	; Done
 stop:
 	rjmp stop
 
