@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\title{CS 3468 -- Homework 6}
+\author{Stuart Olsen}
+
+\begin{document}
+\maketitle
+
+\section*{Chapter 5}
+\subsection*{What are the three most common schemes used to store and retrieve data in cache?}
+
+\begin{itemize}
+\item Write-through
+\item Write-back
+\item Write-around
+\end{itemize}
+
+\subsection*{What is the difference between a cache hit and a cache miss?}
+During an access to a memory location, a cache hit occurs if that location is mapped into cache; otherwise, a cache miss occurs.
+
+\subsection*{Name and describe at least four cache swapping schemes.}
+
+\begin{itemize}
+\item Optimal -- the mapping which will least soon be used is replaced on cache miss.
+\item LRU -- the least recently used mapping is replaced on cache miss.
+\item FIFO -- the least recently added mapping is replaced on cache miss.
+\item NRU -- a mapping not used within some time limit is replaced on cache miss.
+\end{itemize}
+
+\section*{Chapter 9}
+\subsection*{What is a kernel?}
+A component that contains the main functionality of the OS.
+
+\subsection*{Name and describe at least two functions of a kernel.}
+
+\begin{itemize}
+\item Process Management -- includes managing interrupts and error detection.
+\item Memory Management -- includes allocation and protection of system memory.
+\end{itemize}
+
+\subsection*{In general terms, what states can a task be in?}
+A task can be ready, running, or blocked/waiting.
+
+\subsection*{Give one example of an OS and its available states, including the state diagrams.}
+vxWorks has nine states: ``STATE + I,'' ``READY,'' ``DELAY,'' ``SUSPEND,'' ``DELAY + S,'' ``PEND,'' ``PEND + S,'' ``PEND + T,'' and ``PEND + S + T:''
+
+\includegraphics{taskstates.png}
+
+\subsection*{What is a real time operating system?}
+An operating system in which tasks always meet scheduling deadlines and execution times are deterministic.
+
+\subsection*{Give two examples of RTOSes.}
+
+\begin{itemize}
+\item vxWorks
+\item Jbed
+\end{itemize}
+
+\subsection*{Name and describe the most common OS intertask communication and synchronization mechanisms.}
+
+\begin{itemize}
+\item Memory Sharing -- processes communicate by reading from and writing to shared memory.
+\item Message Passing -- processes communicate by sending messages to each other's message queues.
+\item Signaling -- processes communicate by raising signals or interrupts in each other's execution contexts.
+\end{itemize}
+
+\subsection*{What is segmentation?}
+Segmentation is an addressing scheme which divides an address space into sets of addresses called {\it segments} which share accessibility information.
+
+\subsection*{What are segment addresses made up of?}
+Segment addresses are composed of a segment base and a segment offset.
+
+\subsection*{What type of information can be found in a segment?}
+Protection and accessibility information.
+
+\end{document}
