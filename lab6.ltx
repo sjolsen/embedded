@@ -1,0 +1,58 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily,tabsize=2}
+\usepackage{multirow}
+\usepackage{hhline}
+
+\title{Lab Report -- Serial Communication with Assembly}
+\author{
+  Stuart Olsen\\
+  so1132
+}
+
+\setlength{\parskip}{\baselineskip}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\maketitle
+
+\section*{Introduction}
+The objective of this lab was to produce a working program in AVR assembly.
+In this lab, I learned how to use the ATmega128's USART and LED interfaces.
+
+\section*{Implementation}
+The entry point of the program is the reset interrupt handler.
+The reset handler performs the following steps:
+
+\begin{enumerate}
+\item Clear the SREG register
+\item Enable the processor's sleep mode
+\item Initialize the stack
+\item Configure Port A for output
+\item Configure the USART for asynchronous communication
+\item Begin executing application code.
+\end{enumerate}
+
+The application sets a counter to zero on the first reset, incrementing the counter on subsequent resets.
+This is done using one register as the counter and a second as a sentinel.
+The application discriminates between the first and subsequent resets by comparing the sentinel to a special value, and sets the sentinel to that value on the first reset.
+
+The LEDs are controlled using Port A.
+Because the ATmega128 uses electrical low for logical high, the counter must be inverted before outputting it to the LED pins.
+This is done by exclusive-oring the counter with a register with all bits set to 1.
+
+\section*{UART}
+The application sends the counter over the UART line immediately after setting the LEDs, then sleeps in a loop.
+When the transmission of the counter completes, the transmission-complete interrupt fires.
+The corresponding interrupt handler sends the second specified byte, then disables the UART to prevent this byte from being sent repeatedly.
+
+There are several ways in which transmission error could occur.
+One possibility is misconfiguration of the UART.
+If the UART is set to an inappropriate transmission frequency or line convention, transmitted data may be corrupted.
+Other possible causes of transmission error include line noise or other electrical interference.
+
+The output of the Java client program is an alternating sequence of increasing counter values and the constant second byte.
+I have observed the counter values occasionally appearing with a flipped bit, indicating transmission error.
+
+\end{document}
